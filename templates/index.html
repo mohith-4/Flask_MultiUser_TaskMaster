@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href= "{{ url_for('static' , filename  = 'css/main.css')}}" >    
+ 
+<body>
+    <div class="index">
+
+    <center>
+    <h2> Task MAster  </h2>
+    <h2>{{ user }}'s ToDos</h2>
+
+<div id="content">
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Date </th>
+            <th>Actions </th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td> {{ task.content }}</td>
+            <td>{{ task.date_created.date() }}</td>
+            <td>
+                <a href="/delete/{{ task.id }}"> Delete</a> <br>
+                 
+            </td>
+        </tr>
+        {%  endfor %}
+    </table>
+
+    <form action="/index" method="POST">
+        <input type="text" name="content" id="content"> <br>
+        <input type="submit" value="ADD task">
+    </form>
+    
+</div>
+<br><br>
+
+<a href="{{url_for('logout')}}"> Press Here to logout </a>
+
+</div>
+</center>
+    
+</body>
+</html>

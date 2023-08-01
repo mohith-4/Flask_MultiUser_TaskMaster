@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZHome </title>
+    <link rel="stylesheet" href= "{{ url_for('static' , filename  = 'css/main.css')}}" >
+</head>
+<body class="home">
+    <center>
+        <div class="homeContan" id="homeContan">
+            <div class="insidehomecont">
+                <h1 style="padding-top: 70px ; padding-bottom: 30px;"> Login System using Flask </h1>
+
+                <a href="{{url_for('login')}}"> <strong>Login PAge </strong> </a> <br><br>
+
+                <a href="{{url_for('register')}}"> <strong> Register </strong></a>
+            </div>
+          </div>
+    </center>
+
+</body>
+</html>

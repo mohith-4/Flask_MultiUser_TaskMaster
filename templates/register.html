@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href= "{{ url_for('static' , filename  = 'css/main.css')}}" >
+</head>
+<body>
+    <center>
+    <h1>Register </h1>
+    <form action="" method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.username }}
+        {{ form.password }}
+        {{ form.submit }}
+    </form>
+    <br><br>
+
+    <a href="{{url_for('login')}}">Already have an account ? log in</a>
+
+    
+</center>
+    
+</body>
+</html>
